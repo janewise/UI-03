@@ -209,7 +209,7 @@ export function Coin() {
         <Countdown targetDate="2024-10-31T23:59:59" name="Airdrop" />
         
         <a href="https://opensea.io/collection/mythical-gladiator">
-        <img src={banner} alt="airdropbanner" style={{width:'100%',height:'270px',paddingTop:'15px'}} />
+        <img src={banner} alt="airdropbanner" style={{width:'100%',height:'220px',paddingTop:'15px'}} />
         </a>
       
               <ClickHandler
