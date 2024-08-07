@@ -6,9 +6,9 @@ import UpgradeEnergy from "../../classes/upgradeEnergy";
 import Dailyreward from "../DailyandAir/Daily/dailyreward";
 //fire base
 //import { sendUserDataToFirebase,updateUserAutoIncrementInFirebase} from '../firebaseFunctions';
-//firebase
 import { db } from '../../firebase';
 import { ref, onValue } from "firebase/database";
+
 
 export function Dailytask() {
   const balanceRef = useRef({ value: 0 });
@@ -209,6 +209,7 @@ const [totalExchange, setTotalExchange] = useState<number>(0); // State for tota
   return (
     <>
           <div className=" Task">
+      
            <Dailyreward  balanceRef={balanceRef}
                 onRewardClaimed={handleRewardClaimed}/>
             </div>

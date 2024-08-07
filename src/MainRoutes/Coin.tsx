@@ -206,7 +206,7 @@ export function Coin() {
     <>
       <div className="overlay">
         <div className="container-fluid">
-        <Countdown targetDate="2024-10-31T23:59:59" />
+        <Countdown targetDate="2024-10-31T23:59:59" name="Airdrop" />
               <ClickHandler
                 balanceRef={balanceRef}
                 increment={upgradeMap.current.get('clickUpgrade')!.increment}

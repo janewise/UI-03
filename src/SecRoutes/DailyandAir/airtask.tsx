@@ -5,10 +5,10 @@ import UpgradeEnergy from "../../classes/upgradeEnergy";
 //for AirTask
 import Airone from "./Air/airone";
 import Airtwo from "./Air/airtwo";
-
 //fire base
 //import { sendUserDataToFirebase,updateUserAutoIncrementInFirebase} from '../firebaseFunctions';
-
+//
+import Countdown from "../../components/countdown";
 
 
 export function Airtask() {
@@ -206,12 +206,13 @@ export function Airtask() {
   return (
     <>
           <div className=" Task row">
-          <div className="col-sm col-md-6 col-lg-4">
+          <Countdown targetDate="2024-08-30T23:59:59" name="Airdrop Task" />
+          <div  style={{marginTop:'20px'}} className="col-sm col-md col-lg-4">
             <Airone userId={userId}  balanceRef={balanceRef}
                 onRewardClaimed={handleRewardClaimed}/>
             </div>
             {/* // */}
-            <div className="col-sm col-md-6 col-lg-4">
+            <div className="col-sm col-md col-lg-4">
             <Airtwo userId={userId}  balanceRef={balanceRef}
                 onRewardClaimed={handleRewardClaimed}/>
             </div>
