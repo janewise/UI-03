@@ -12,7 +12,7 @@ import UpgradeClick from "../components/click/upgradeClick";
 import { sendUserDataToFirebase,updateUserAutoIncrementInFirebase} from '../firebaseFunctions';
 //countdown
 import Countdown from "../components/countdown";
-
+import banner from "../assets/banner1.png"
 
 export function Coin() {
   const balanceRef = useRef({ value: 0 });
@@ -205,8 +205,13 @@ export function Coin() {
   return (
     <>
       <div className="overlay">
-        <div className="container-fluid">
+        <div className="container-fluid" style={{paddingLeft:'0',paddingRight:'0'}}>
         <Countdown targetDate="2024-10-31T23:59:59" name="Airdrop" />
+        
+        <a href="https://opensea.io/collection/mythical-gladiator">
+        <img src={banner} alt="airdropbanner" style={{width:'100%',height:'120px',paddingTop:'15px'}} />
+        </a>
+      
               <ClickHandler
                 balanceRef={balanceRef}
                 increment={upgradeMap.current.get('clickUpgrade')!.increment}
