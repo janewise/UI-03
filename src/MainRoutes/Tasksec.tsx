@@ -279,6 +279,7 @@ import { Route, Routes, NavLink, Navigate } from "react-router-dom";
 import { Nortask } from "../SecRoutes/DailyandAir/nortask";
 import { Dailytask } from "../SecRoutes/DailyandAir/dailytask";
 import { Airtask } from "../SecRoutes/DailyandAir/airtask";
+import { Reftask } from "../SecRoutes/DailyandAir/reftask";
 import "./SecNavcss/Tasknav.css";
 
 export function Tasksec() {
@@ -291,7 +292,7 @@ export function Tasksec() {
               <li>
                 <NavLink 
                   to="/tasksec/task" 
-                  className={({ isActive }) => isActive ? "taskseclink active" : "taskseclink"}
+                  className={({ isActive }) => isActive ? "shorttaskbar taskseclink active" : "shorttaskbar taskseclink"}
                 >
                   Tasks
                 </NavLink>
@@ -299,7 +300,7 @@ export function Tasksec() {
               <li>
                 <NavLink 
                   to="/tasksec/dailytask" 
-                  className={({ isActive }) => isActive ? "taskseclink active" : "taskseclink"}
+                  className={({ isActive }) => isActive ? "shorttaskbar taskseclink active" : "shorttaskbar taskseclink"}
                 >
                   Daily
                 </NavLink>
@@ -307,9 +308,17 @@ export function Tasksec() {
               <li>
                 <NavLink 
                   to="/tasksec/airtask" 
-                  className={({ isActive }) => isActive ? "taskseclink active" : "taskseclink"}
+                  className={({ isActive }) => isActive ? "longtaskbar taskseclink active" : "longtaskbar taskseclink"}
                 >
                  AirDrop
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/tasksec/reftask" 
+                  className={({ isActive }) => isActive ? "longtaskbar taskseclink active" : "longtaskbar taskseclink"}
+                >
+                 Reftask
                 </NavLink>
               </li>
             </ul>
@@ -320,6 +329,7 @@ export function Tasksec() {
             <Route path="task" element={<Nortask />} />
             <Route path="dailytask" element={<Dailytask />} />
             <Route path="airtask" element={<Airtask />} />
+            <Route path="reftask" element={<Reftask />} />
           </Routes>
         </div>
       </div>
